@@ -1,0 +1,21 @@
+##使用cloud config client 从 cloud config server 获取配置文件
+spring:
+  application:
+    name: test-demo  #congfig server 中配置文件 名称应该与之对应 /{label}/{application}-{profile}
+
+  cloud:
+  #配置cloud config client 本地仓库地址
+#    config:
+#      profile: dev
+#      label: master
+#      uri: http://localhost:5555
+   #配置cloud config client git仓库地址
+    config:
+          fail-fast: true
+          discovery:
+            service-id: cloud-git-config
+            enabled: true
+          profile: dev
+          label: master
+
+

@@ -1,0 +1,73 @@
+spring:
+    application:
+        name: cloud-zuul-gateway #服务Id
+##端口
+server:
+    port: 9000 #端口
+##eureka client 服务客户端配置
+eureka:
+  instance:
+    #ip-address: 10.10.111.245
+    prefer-ip-address: true #
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+          defaultZone: http://localhost:8761/eureka/#将服务注册到服务注册中心
+
+
+##zuul服务网关配置
+zuul:
+  ignored-services: "*" #忽略所有请求 ，zuul默认有网关路由规则，规则自定义不使用
+  prefix: /api #为zuul设置一个公共的前缀
+  stripPrefix: false #该配置默认为ture
+  ratelimit: # 网关限流
+    key-prefix: gate_rate
+    enabled: true
+    repository: REDIS #REDIS, JPA, IN_MEMORY
+    behind-proxy: true
+    default-policy: #optional - will apply unless specific policy exists
+      limit: 200
+      refresh-interval: 60 #default value (in seconds)
+      type: #optional
+        - user
+        - origin
+        - url
+  ##路由规则
+  routes:
+  ##自定义路由
+    xxxx: #网关名可以随意写唯一即可
+      path: /test/** #映射请求uri,/**表示匹配所有字段且可以多层级/*只能匹配单层级
+      serviceId: test-demo #注册在服务注册中心的服务ID
+      stripPrefix: false #该配置默认为ture 需要注意 zuul层级也有stripPrefix默认为ture
+    oooo:
+      path: /test2/**
+      serviceId: test-demo2
+      stripPrefix: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+            include: '*'
+
+#请求和响应GZIP压缩支持
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+

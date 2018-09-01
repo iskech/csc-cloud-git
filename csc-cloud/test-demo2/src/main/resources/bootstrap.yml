@@ -1,0 +1,17 @@
+##使用cloud config client 从 cloud config server 获取配置文件
+spring:
+  application:
+    name: test-demo2  #congfig server 中配置文件 名称应该与之对应 /{label}/{application}-{profile}
+
+  cloud:
+    config:
+          fail-fast: true
+          discovery:
+            service-id: cloud-git-config
+            enabled: true
+          profile: dev
+          label: master
+logging:
+  level:
+    com.csccloud.testdemo2.fein.FeignTestDemo: debug
+

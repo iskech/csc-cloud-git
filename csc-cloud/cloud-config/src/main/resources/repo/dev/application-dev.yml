@@ -1,0 +1,108 @@
+
+server:
+    port: 1000
+
+spring:
+    application:
+        name: test-demo
+    jackson:
+        date-format: yyyy/MM/dd HH/mm/ss
+        time-zone: GMT+8
+        default-property-inclusion: non_null
+    ##数据库配置 链接四要素等基本配置
+    datasource:
+        name: mysql
+        url: jdbc:mysql://localhost:3306/ag_admin_v1?useUnicode=true&characterEncoding=UTF8
+        username: root
+        password: root
+
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        ##以下配置后续补充
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+
+##mybatis配置
+mybatis:
+    mapperLocations: classpath:mapper/**/*.xml #扫描mapper.xml 所在位置 相对classpath路径位置
+    configLocation: classpath:mybatis.xml      #mybatis.xml 配置文件所在位置 相对classpath路径位置
+
+
+
+##redis-cache
+redis:
+    pool:
+         maxActive: 300
+         maxIdle: 100
+         maxWait: 1000
+    host: localhost
+    port: 6379
+    password:
+    timeout: 2000
+
+    sysName: liu #redis 库名
+    enable: true
+    database: 0
+##logf4j 配置
+logging:
+  level:
+    com.csccloud.testdemo: debug #包下面所有类的日志级别
+
+##Eureka 客户端配置
+eureka:
+    instance:
+        ip-address: true
+        statusPageUrlPath: /actuator/info
+        healthCheckUrlPath: /actuator/health
+        home-page-url-path: /
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/ #服务注册中心地址
+
+##ribbon组件配置
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000 #负载连接超时阀值 超时会报异常
+
+##feign组件配置
+feign:
+  hystrix:
+    enabled: true ##开启feign组件对hystrix熔断机制的支持
+
+##hystrix组件配置 hystrix 配置策略较为复杂,决定了负载性能以及微服务访问安全 后续补充
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000 ##并发执行的最大线程数，默认10
+      maxQueueSize: 1000 ##BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000 #允许最大响 应超时时间5s
+          #隔离策略默认使用THREAD(即Hystrix熔断机制在新开的线程中执行) SEMApHORE(信号量 不开启新线程使用父线程)
+          #官方推荐使用默认 线程隔离策略,性能较后者低但更安全.
+          strategy: THREAD
+
+management:
+  endpoints:
+    web:
+      exposure:
+            include: '*'
+
+
+

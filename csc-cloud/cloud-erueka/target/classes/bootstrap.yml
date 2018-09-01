@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: cloud-eureka-server #服务注册中心应用ip 对应 application
+
+server:
+    port: 8761 #启动端口 8761 为eureka server默认端口 若使用其它端口需要声明defaultZoneUrl
+
+eureka:
+    instance:
+      prefer-ip-address: true # 为true则springCloud 将自动获取本机ip地址并在eureka中注册反之则使用本机hostname
+      #ip-address: 指定ip地址 优先级高于 prefer-ip-address 属性
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+        serviceUrl:
+          defaultZone: http://localhost:8761/eureka/ #配置中心地址
+    server:
+      enable-self-preservation: false #启用自我保护机制默认true
