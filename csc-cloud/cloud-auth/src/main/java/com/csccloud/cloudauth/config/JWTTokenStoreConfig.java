@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class JWTTokenStoreConfig {
-    @Autowired
+    //@Autowired
     //private Serviceconfig
+    //呵呵哒
 }

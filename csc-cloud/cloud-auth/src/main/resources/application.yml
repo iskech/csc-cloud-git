@@ -3,7 +3,7 @@ server:
 
 spring:
     application:
-      name: test-demo
+      name: cloud-auth-jwt
     jackson:
         date-format: yyyy/MM/dd HH/mm/ss
         time-zone: GMT+8
@@ -93,17 +93,17 @@ logging:
     com.csccloud.cloudauth: DEBUG #包下面所有类的日志级别
 #    org.springframework: DEBUG
 
-##Eureka 客户端配置
-#eureka:
-#    instance:
-#        #ip-address: 10.10.111.245
-#        prefer-ip-address: true
-#        statusPageUrlPath: /actuator/info
-#        healthCheckUrlPath: /actuator/health
-#        home-page-url-path: /
-#    client:
-#        serviceUrl:
-#            defaultZone: http://localhost:8761/eureka/ #服务注册中心地址
+#Eureka 客户端配置
+eureka:
+    instance:
+        #ip-address: 10.10.111.245
+        prefer-ip-address: true
+        statusPageUrlPath: /actuator/info
+        healthCheckUrlPath: /actuator/health
+        home-page-url-path: /
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/ #服务注册中心地址
 
 ##ribbon组件配置
 #ribbon:
