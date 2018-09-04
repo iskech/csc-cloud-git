@@ -3,7 +3,7 @@ package com.csccloud.testdemo.rest;
 
 //import com.codingapi.tx.annotation.TxTransaction;
 import com.csccloud.testdemo.entity.User;
-import com.csccloud.testdemo.fein.FeignTestDemo;
+import com.csccloud.testdemo.feign.FeignTestDemo;
 
 import com.csccloud.testdemo.rabbit.DemoProcessor;
 import com.csccloud.testdemo.rabbit.impl.DemoSourceSender;
@@ -18,11 +18,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessageChannel;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.beans.Transient;
 import java.util.HashMap;
 import java.util.Random;
 

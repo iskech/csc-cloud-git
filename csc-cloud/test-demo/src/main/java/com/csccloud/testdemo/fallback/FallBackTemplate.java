@@ -1,7 +1,7 @@
 package com.csccloud.testdemo.fallback;
 
 import com.csccloud.testdemo.entity.User;
-import com.csccloud.testdemo.fein.FeignTestDemo;
+import com.csccloud.testdemo.feign.FeignTestDemo;
 import com.csccloud.testdemo.rest.UserRest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

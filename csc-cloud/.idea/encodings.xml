@@ -4,7 +4,12 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-auth/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-erueka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-spring5-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-zuul-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-demo2" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

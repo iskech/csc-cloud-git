@@ -1,6 +1,6 @@
 package com.csccloud.testdemo.fallback;
 
-import com.csccloud.testdemo.fein.FeignTestDemo;
+import com.csccloud.testdemo.feign.FeignTestDemo;
 import feign.hystrix.FallbackFactory;
 
 //

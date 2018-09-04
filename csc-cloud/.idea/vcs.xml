@@ -2,5 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cloud-config" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cloud-spring5-gateway" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cloud-zuul-gateway" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/test-demo" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/test-demo2" vcs="svn" />
   </component>
 </project>

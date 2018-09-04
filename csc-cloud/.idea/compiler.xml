@@ -7,8 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-auth" />
+        <module name="cloud-config" />
         <module name="cloud-erueka" />
+        <module name="cloud-spring5-gateway" />
+        <module name="cloud-zull-gateway" />
         <module name="csccloud" />
+        <module name="test-demo" />
+        <module name="test-demo2" />
       </profile>
     </annotationProcessing>
   </component>

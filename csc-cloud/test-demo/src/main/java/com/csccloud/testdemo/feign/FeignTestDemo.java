@@ -1,4 +1,4 @@
-package com.csccloud.testdemo.fein;
+package com.csccloud.testdemo.feign;
 
 import com.csccloud.testdemo.entity.User;
 import com.csccloud.testdemo.fallback.FallBackTemplate;

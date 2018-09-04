@@ -1,0 +1,86 @@
+server:
+  port: 9001
+
+eureka:
+    instance:
+        statusPageUrlPath: /actuator/info
+        healthCheckUrlPath: /actuator/health
+        home-page-url-path: /
+
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+#请求和响应GZIP压缩支持
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: false
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+
+spring:
+  application:
+      name: ace-gateway-v2
+  redis:
+      database: 1
+      host: 127.0.0.1
+      jedis:
+        pool:
+            max-active: 20
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+
+  cloud:
+    gateway:
+      locator:
+        enabled: true
+      routes:
+      # =====================================
+      - id: ace-auth
+        uri: lb://test-demo
+        order: 8000
+        predicates:
+        - Path=/api/test/**
+        filters:
+        - StripPrefix=0
+      - id: ace-admin
+        uri: lb://test-demo2
+        order: 8001
+        predicates:
+        - Path=/api/test2/**
+        filters:
+        - StripPrefix=0
+
+logging:
+  level:
+    com.csccloud.cloudspring5gateway: info
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+gate:
+  ignore:
+    startWith: /auth/jwt
+
+cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+
+
