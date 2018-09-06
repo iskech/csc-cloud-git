@@ -14,14 +14,14 @@ spring:
 logging:
   level:
     com.csccloud.testdemo2.fein.FeignTestDemo: debug
-cas:
-#  server-url-prefix: https://10.10.111.245/uap/
-#  server-login-url: https://10.10.111.245/uap/login
-#  client-host-url: http://10.10.111.245:1112
-#  validation-type: CAS3
-#  server-url-prefix: https://10.10.111.245/uap/
-#  server-login-url: https://10.10.111.245/uap/login
-#  client-host-url: http://10.10.111.245:1112
-  validation-type: CAS
-  gateway: true
+#cas:
+##  server-url-prefix: https://10.10.111.245/uap/
+##  server-login-url: https://10.10.111.245/uap/login
+##  client-host-url: http://10.10.111.245:1112
+##  validation-type: CAS3
+##  server-url-prefix: https://10.10.111.245/uap/
+##  server-login-url: https://10.10.111.245/uap/login
+##  client-host-url: http://10.10.111.245:1112
+#  validation-type: CAS
+#  gateway: true
 

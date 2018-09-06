@@ -22,15 +22,15 @@ spring:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:6000/user #访问受保护资源回调url
-cas:
-#  server-url-prefix: https://10.10.111.245/uap/
-#  server-login-url: https://10.10.111.245/uap/login
-#  client-host-url: http://10.10.111.245:1112
-#  validation-type: CAS3
-#  server-url-prefix: https://10.10.111.245/uap/
-#  server-login-url: https://10.10.111.245/uap/login
-#  client-host-url: http://10.10.111.245:1112
-  validation-type: CAS
-  gateway: true
+      user-info-uri: http://localhost:6000/auth/user #访问受保护资源回调url
+#cas:
+##  server-url-prefix: https://10.10.111.245/uap/
+##  server-login-url: https://10.10.111.245/uap/login
+##  client-host-url: http://10.10.111.245:1112
+##  validation-type: CAS3
+##  server-url-prefix: https://10.10.111.245/uap/
+##  server-login-url: https://10.10.111.245/uap/login
+##  client-host-url: http://10.10.111.245:1112
+#  validation-type: CAS
+#  gateway: true
 

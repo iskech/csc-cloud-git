@@ -57,10 +57,15 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
         endpoints.authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService);
     }
+//    @Override
+//    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+//        //允许表单认证
+//        oauthServer.allowFormAuthenticationForClients();
+//    }
     @Override
-    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-        //允许表单认证
-        oauthServer.allowFormAuthenticationForClients();
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        security
+                .tokenKeyAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()");
     }
-
 }

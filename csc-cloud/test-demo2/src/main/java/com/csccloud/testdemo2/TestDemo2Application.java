@@ -4,7 +4,7 @@ import com.ace.cache.EnableAceCache;
 import com.csccloud.testdemo2.rabbit.DemoProcessor;
 import feign.Logger;
 import lombok.extern.log4j.Log4j;
-import net.unicon.cas.client.configuration.EnableCasClient;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -33,7 +33,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard
 @Log4j
 @ComponentScan(basePackages={"com.csccloud.testdemo2"})
-@EnableCasClient // 开启CA
+//@EnableCasClient // 开启CA
 public class TestDemo2Application {
     //使用该注解才能在该应用中的RestTemplate 具备ribboon的负载功能
     @LoadBalanced

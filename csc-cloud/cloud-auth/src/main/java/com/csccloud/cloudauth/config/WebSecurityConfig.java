@@ -17,6 +17,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
@@ -28,21 +29,21 @@ import java.util.Arrays;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+//    @Bean
+//    public AuthenticationManager authenticationManagerBean() throws Exception {
+//        return super.authenticationManagerBean();
+//    }
     @Bean
     public UserDetailsService userDetailsServiceBean() throws Exception {
         return super.userDetailsServiceBean();
     }
-
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-       auth.inMemoryAuthentication()
-               .withUser("user1")
-               .password("123456")
-               .roles("ADMIN","USER");
-    }
+//
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//       auth.inMemoryAuthentication()
+//               .withUser("user1")
+//               .password("123456")
+//               .roles("ADMIN","USER");
+//    }
 
 //    @Bean
 //    @Override
@@ -63,8 +64,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/oauth/**").permitAll();
         // @formatter:on
     }
+//    @Bean
+//    public static NoOpPasswordEncoder passwordEncoder() {
+//        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
+//    }
+
+
+
+
     @Bean
-    public static NoOpPasswordEncoder passwordEncoder() {
-        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+
+//    @Bean
+//    public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
+//        return new SecurityEvaluationContextExtension();
+//    }
+
+    //不定义没有password grant_type
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 }

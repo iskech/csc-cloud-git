@@ -147,17 +147,23 @@
             <groupId>commons-pool</groupId>
             <artifactId>commons-pool</artifactId>
         </dependency>
+        <!--winghon uap cas client -->
         <!--<dependency>-->
             <!--<groupId>winhong.uap.cas.client</groupId>-->
             <!--<artifactId>cas-client</artifactId>-->
             <!--<version>3.4.2-SNAPSHOT</version>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>net.unicon.cas</groupId>
-            <artifactId>cas-client-autoconfig-support</artifactId>
-            <version>1.4.0-GA</version>
-        </dependency>
-
+        <!--<dependency>-->
+            <!--<groupId>net.unicon.cas</groupId>-->
+            <!--<artifactId>cas-client-autoconfig-support</artifactId>-->
+            <!--<version>1.4.0-GA</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.jasig.cas/cas-server-support-oauth -->
+        <!--<dependency>-->
+            <!--<groupId>org.jasig.cas</groupId>-->
+            <!--<artifactId>cas-server-support-oauth</artifactId>-->
+            <!--<version>4.1.9</version>-->
+        <!--</dependency>-->
 
         <!--热部署-->
         <dependency>

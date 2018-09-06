@@ -6,6 +6,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
+import javax.servlet.http.HttpServletResponse;
+
 @Configuration
 public class ResourceCongfig extends ResourceServerConfigurerAdapter {
     @Override
@@ -30,12 +32,21 @@ public class ResourceCongfig extends ResourceServerConfigurerAdapter {
 //                .antMatchers("/user/**").authenticated();//配置order访问控制，必须认证过后才可以访问
 
 
+            http
+                    .csrf().disable()
+                    .exceptionHandling()
+                    .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+                    .and()
+                    .authorizeRequests()
+                    .anyRequest().authenticated()
+                    .and()
+                    .httpBasic();
 
-            http.authorizeRequests()
-                    .antMatchers( "/resources/**" ,"/oauth/token1").permitAll()
-                    .antMatchers( "/user/**").hasRole("USER" )
-                    .antMatchers( "/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
-                    .anyRequest().authenticated();
+//            http.authorizeRequests()
+//                    .antMatchers( "/resources/**" ,"/oauth/token1").permitAll()
+//                    .antMatchers( "/user/**").hasRole("USER" )
+//                    .antMatchers( "/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
+//                    .anyRequest().authenticated();
 
     }
 

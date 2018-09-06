@@ -4,7 +4,8 @@ package com.csccloud.testdemo;
 import com.ace.cache.EnableAceCache;
 import com.csccloud.testdemo.rabbit.DemoProcessor;
 import feign.Logger;
-import net.unicon.cas.client.configuration.EnableCasClient;
+
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -21,6 +22,7 @@ import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.ComponentScan;
+
 import org.springframework.web.client.RestTemplate;
 
 import javax.imageio.spi.ServiceRegistry;
@@ -41,7 +43,7 @@ import javax.imageio.spi.ServiceRegistry;
 //表明该应用资源受oauth2保护
 //@EnableResourceServer
 @ComponentScan(basePackages={"com.csccloud.testdemo"})
-@EnableCasClient // 开启CA
+
 public class TestDemoApplication {
 
     //使用该注解才能在该应用中的RestTemplate 具备ribbon的负载功能

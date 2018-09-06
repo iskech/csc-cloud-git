@@ -44,6 +44,10 @@ zuul:
       path: /test2/**
       serviceId: test-demo2
       stripPrefix: false
+    ooo1:
+        path: /auth/**
+        serviceId: cloud-auth-jwt
+        stripPrefix: false
   sensitive-headers: Cookie,Set-Cookie #允许网关传播Cookie 包括Authorization
 
 
@@ -73,21 +77,18 @@ ribbon:
   ConnectTimeout: 5000
 
 
-security:
-  user:
-    password: user  # 直接登录时的密码
-  ignored: /
-  sessions: never   # session策略
-  oauth2:
-    sso:
-      loginPath: /uap/longin   # 登录路径
-    client:
-      clientId: 65300c28371d926bbab2 # clientId
-      clientSecret: 29d8d45e74e2658a2aca90e0463a34db09e0acb9   # clientSecret
-      accessTokenUri: https://192.168.217.198/uap/longin/oauth/access_token
-      userAuthorizationUri: https://192.168.217.198/uap/longin/oauth/authorize
-    resource:
-      userInfoUri: https://192.168.217.198/uap/user
-      preferTokenInfo: false
+#security:
+#  oauth2:
+#    sso:
+#      loginPath: /longin   # 登录路径
+#    client:
+#      clientId: 65300c28371d926bbab2 # clientId
+#      clientSecret: 29d8d45e74e2658a2aca90e0463a34db09e0acb9
+#                        # clientSecret
+#      accessTokenUri: https://github.com/login/oauth/access_token/
+#      userAuthorizationUri: https://github.com/login/oauth/authorize
+#    resource:
+#      userInfoUri: https://api.github.com/user
+#      preferTokenInfo: false
 
 

@@ -137,3 +137,8 @@ management:
     web:
       exposure:
         include: '*'
+
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3
