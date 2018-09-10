@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ec3a333c-6553-47e3-8223-b72ea3de69ef" name="Default" comment="cloud-auth 使用OAuth2生成token,并授权指定资源访问测试完成">
+    <list default="true" readonly="true" id="ec3a333c-6553-47e3-8223-b72ea3de69ef" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloud-zuul-gateway/src/main/resources/bootstrap.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="26">
               <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
@@ -656,7 +656,7 @@
       <workItem from="1535938678831" duration="4434000" />
       <workItem from="1535946099230" duration="47405000" />
       <workItem from="1536132130833" duration="18469000" />
-      <workItem from="1536542266867" duration="8408000" />
+      <workItem from="1536542266867" duration="8689000" />
     </task>
     <task id="LOCAL-00001" summary="初始化cloud-oauth2">
       <created>1535711175983</created>
@@ -683,7 +683,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113908000" />
+    <option name="totallyTimeSpent" value="114189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -706,7 +706,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.49935815" visible="true" weight="0.68802226" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.49935815" visible="true" weight="0.83704734" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Spring" order="7" />
@@ -736,7 +736,8 @@
     <MESSAGE value="初始化cloud-oauth2" />
     <MESSAGE value="cloud-auth 使用OAuth2生成token,并授权指定资源访问测试完成" />
     <MESSAGE value="demo-test 加入oauth2授权访问限制 初步测试授权可行" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo-test 加入oauth2授权访问限制 初步测试授权可行" />
+    <MESSAGE value="uap 系统接入cloud-zuul-gateway 模块测试通过" />
+    <option name="LAST_COMMIT_MESSAGE" value="uap 系统接入cloud-zuul-gateway 模块测试通过" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1093,7 +1094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-zuul-gateway/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="26">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
