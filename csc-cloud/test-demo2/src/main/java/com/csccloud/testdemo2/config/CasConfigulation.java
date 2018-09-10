@@ -18,7 +18,6 @@
 //import java.util.Map;
 //
 //@Configuration
-//@Component
 //public class CasConfigulation {
 //    @Bean
 //    public FilterRegistrationBean authenticationFilterRegistrationBean() {

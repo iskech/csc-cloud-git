@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 
 @Configuration
-@Component
 public class CasConfigulation {
     @Bean
     public FilterRegistrationBean authenticationFilterRegistrationBean() {
@@ -26,7 +25,7 @@ public class CasConfigulation {
         authenticationFilter.setFilter(new AuthenticationFilter());
         Map<String, String> initParameters = new HashMap<String, String>();
         initParameters.put("casServerLoginUrl", "https://10.10.111.245/uap/login");
-        initParameters.put("serverName", "http://10.10.111.245:1112");
+        initParameters.put("serverName", "http://10.10.111.245:9000");
         authenticationFilter.setInitParameters(initParameters);
         authenticationFilter.setOrder(2);
         List<String> urlPatterns = new ArrayList<String>();
@@ -46,7 +45,7 @@ public class CasConfigulation {
         authenticationFilter.setFilter(new Cas20ProxyReceivingTicketValidationFilter());
         Map<String, String> initParameters = new HashMap<String, String>();
         initParameters.put("casServerUrlPrefix", "https://cas.iwinhong.com/uap");
-        initParameters.put("serverName", "http://10.10.111.245:1112");
+        initParameters.put("serverName", "http://10.10.111.245:9000");
         authenticationFilter.setInitParameters(initParameters);
         authenticationFilter.setOrder(1);
         List<String> urlPatterns = new ArrayList<String>();

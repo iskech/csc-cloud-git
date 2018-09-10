@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ec3a333c-6553-47e3-8223-b72ea3de69ef" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/component" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/component/DemoOAuth2RestTemplate.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config/CasConfigulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config/OAuth2Config.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/src/main/java/com/csccloud/testdemo/config/CasConfigulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo2/src/main/java/com/csccloud/testdemo2/config" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/test-demo2/src/main/java/com/csccloud/testdemo2/config/CasConfigulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-zuul-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zuul-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/CloudZullGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/java/com/csccloud/cloudzullgateway/CloudZullGatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-zuul-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
@@ -204,7 +210,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="268" />
     <option name="y" value="134" />
     <option name="width" value="932" />
@@ -656,7 +662,7 @@
       <workItem from="1535938678831" duration="4434000" />
       <workItem from="1535946099230" duration="47405000" />
       <workItem from="1536132130833" duration="18469000" />
-      <workItem from="1536542266867" duration="8689000" />
+      <workItem from="1536542266867" duration="9192000" />
     </task>
     <task id="LOCAL-00001" summary="初始化cloud-oauth2">
       <created>1535711175983</created>
@@ -683,10 +689,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114189000" />
+    <option name="totallyTimeSpent" value="114692000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5006418" side_tool="true" weight="0.40807799" />
@@ -706,8 +712,8 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.49935815" visible="true" weight="0.83704734" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.49935815" weight="0.83704734" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.6392758" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -728,6 +734,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
